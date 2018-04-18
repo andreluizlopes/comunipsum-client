@@ -1,0 +1,49 @@
+.upload-file-status {
+  .upload-file-process {
+    text-align: left;
+    height: 60px;
+    background-color: #EEEEEE;
+    transition: 0.2s linear background-color;
+    &.is-active {
+      background-color: #fff;
+    }
+    .upload-file-process-loader {
+      margin: 15px 0 0 20px;
+    }
+    .upload-file-process-name {
+      font-weight: 900;
+      font-size: 13px;
+      color: rgba(0, 0, 0, 0.87);
+      margin-top: 18px;
+    }
+    .upload-file-process-status {
+      font-size: 13px;
+      color: #BDBDBD;
+      margin-top: 18px;
+    }
+    .upload-file-process-empty {
+      text-align: center;
+      font-size: 13px;
+      color: #9E9E9E;
+      padding-top: 18px;
+    }
+    .error-message {
+      font-size: 13px;
+      color: #F44336;
+      margin-top: 19px;
+    }
+    .upload-file-response {
+      .value {
+        font-size: 13px;
+        color: #757575;
+        top: 11px;
+        position: relative;
+      }
+      .icon-response {
+        margin-right: 6px;
+        top: 18px;
+        position: relative;
+      }
+    }
+  }
+}

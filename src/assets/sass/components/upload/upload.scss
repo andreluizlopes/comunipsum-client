@@ -1,0 +1,36 @@
+.upload {
+  .upload-card {
+    height: calc(100vh - 100px);
+    margin-top: 10px;
+    text-align: center;
+  }
+  .upload-info {
+    padding: 30px;
+    text-align: left;
+    h2 {
+      font-size: 16px;
+      color: rgba(0, 0, 0, 0.87);
+      line-height: 24px;
+    }
+    p {
+      font-size: 13px;
+      color: rgba(0, 0, 0, 0.54);
+      line-height: 20px;
+    }
+  }
+  .upload-button {
+    margin: 0 auto;
+  }
+  .upload-input-file {
+    display: none;
+  }
+  .upload-progress {
+    padding: 30px;
+    .upload-file-name {
+      height: 25px;
+      text-align: left;
+      font-size: 13px;
+      color: rgba(0, 0, 0, 0.87);
+    }
+  }
+}

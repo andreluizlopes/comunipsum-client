@@ -1,0 +1,28 @@
+.home {
+  .home-actions {
+    height: 400px;
+    .home-actions-limit {
+      padding-top: 200px;
+      
+
+    }
+    .home-actions-copy {
+      width: 160px !important;
+      height: 160px !important;
+      span {
+        font-size: 120px;
+      }
+    }
+  }
+  .home-phrase {
+    .phrase-paper {
+      width: 100%;
+      height: 400px;
+      text-align: center;
+      .phrase-textarea {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+}

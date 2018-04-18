@@ -1,0 +1,41 @@
+{
+  "name": "price-front",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.17.1",
+    "history": "^4.7.2",
+    "lodash": "^4.17.5",
+    "material-ui": "^0.20.0",
+    "papaparse": "^4.3.7",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.6",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "react-router-redux": "^5.0.0-alpha.9",
+    "react-scripts": "1.1.0",
+    "react-tap-event-plugin": "^3.0.2",
+    "react-text-mask": "^5.1.0",
+    "redux": "^3.7.2",
+    "redux-form": "^7.2.3",
+    "redux-thunk": "^2.2.0"
+  },
+  "scripts": {
+    "prestart": "gulp price-sass",
+    "prebuild": "gulp price-sass",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "test:ci": "react-scripts test --testResultsProcessor ./node_modules/jest-junit",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "jest-junit": "^3.6.0",
+    "jest-mock-axios": "^1.0.21",
+    "redux-mock-store": "^1.5.1"
+  }
+}

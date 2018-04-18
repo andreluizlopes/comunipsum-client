@@ -1,0 +1,16 @@
+.pagination {
+  text-align: right;
+  background-color: #FAFAFA;
+  .pagination-display {
+    display: inline-block;
+    color: rgba(0, 0, 0, 0.54);
+    font-size: 13px;
+    line-height: 30px;
+    vertical-align: middle;
+    padding: 0px 0 12px;
+  }
+  .pagination-actions {
+    display: inline-block;
+    margin: 8px 10px 0;
+  }
+}

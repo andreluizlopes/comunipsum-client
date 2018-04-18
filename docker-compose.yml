@@ -1,0 +1,9 @@
+nodejs:
+  container_name: nodejs_price_front
+  build: ./
+  volumes:
+    - '.:/usr/src/app'
+  ports:
+    - '3000:3000'
+  environment:
+    - NODE_ENV=development
