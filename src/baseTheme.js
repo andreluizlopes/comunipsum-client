@@ -3,7 +3,7 @@ import merge from 'lodash.merge';
 const colors = require('material-ui/styles/colors');
 const muiTheme = {
   palette: {
-    textColor: colors.grey200,
+    textColor: colors.grey900,
     primary1Color: '#ffce00',
     accent1Color: colors.redA200,
     accent2Color: colors.redA400,

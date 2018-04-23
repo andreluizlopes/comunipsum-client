@@ -41,6 +41,16 @@ p {
 }
 
 // utility
+.clearfix {
+  &:before, &:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+  }
+  &:after {
+    clear: both;
+  }
+}
+
 .left {
   text-align: left;
 }
@@ -77,6 +87,8 @@ $breakpoint-large: 60em; // 960px
   }
   @media only screen and (min-width: $breakpoint-large) {
     width: calc(100% - 20px);
+    max-width: $breakpoint-large;
+    margin: 0 auto;
   }
 }
 

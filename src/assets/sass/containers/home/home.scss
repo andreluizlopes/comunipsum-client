@@ -1,9 +1,24 @@
 .home {
+  .home-description  {
+    h2 {
+      margin-top: 10px;
+      font-size: 22px;
+    }
+  }
   .home-actions {
-    height: 400px;
+    margin: 30px 0;
+    span {
+      float: left;
+      margin: 15px 15px 15px 0;
+    }
+    .home-actions-field {
+      position: relative;
+      float: left;
+      background: #fff;
+      width: 256px;
+      margin-bottom: 15px;
+    }
     .home-actions-limit {
-      padding-top: 200px;
-      
 
     }
     .home-actions-copy {
@@ -19,9 +34,26 @@
       width: 100%;
       height: 400px;
       text-align: center;
+      position: relative;
+      .phrase-copy {
+        position: absolute;
+        right: 0;
+      }
       .phrase-textarea {
         width: 100%;
-        text-align: center;
+        height: 100%;
+        padding: 40px;
+        text-align: left;
+        -webkit-appearance: none;
+        border: none;
+        font-size: 18px;
+      }
+    }
+  }
+  .home-alert {
+    div {
+      div {
+        color: #fff !important;
       }
     }
   }

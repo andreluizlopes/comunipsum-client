@@ -6,7 +6,7 @@ import Home from '../home/home';
 import About from '../about';
 import SpecialPrice from '../special_price'
 import Schedule from '../schedule';
-import Upload from '../../components/upload/upload';
+import Header from '../../components/header/header';
 import Signin from '../../components/auth/signin';
 import RequireAuth from '../../components/auth/require_auth';
 
@@ -73,10 +73,7 @@ class App extends Component {
   render() {
     return (
       <div className="app-price">
-        <AppBar
-          title="PRICE SERVICE"
-          onLeftIconButtonClick={this.handleOpenLeftMenu}
-        />
+        <Header />
 
         <Drawer
           docked={false}
@@ -86,19 +83,9 @@ class App extends Component {
           {this.renderLinks()}
         </Drawer>
 
-        <Link to="/upload">
-          <FloatingActionButton
-            secondary={true}
-            className="app-upload-button"
-          >
-            <IconAdd />
-          </FloatingActionButton>
-        </Link>
-
         <main>
           <Route exact path="/signin" component={Signin} />
           <Route exact path="/home" component={Home} />
-          <Route exact path="/upload" component={Upload} />
           <Route exact path="/about" component={About} />
           <Route exact path="/special-price" component={RequireAuth(SpecialPrice)} />
           <Route exact path="/schedule" component={RequireAuth(Schedule)} />
