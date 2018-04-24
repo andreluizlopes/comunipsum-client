@@ -1,5 +1,8 @@
-# DFTech Price-front
-> Dafiti Price based on ReactJS and NodeJS
+# Comunipsum
+> based on ReactJS and NodeJS
+
+## API
+> https://github.com/lcfumes/api.comunipsum
 
 ## Installation with docker-compose
 
@@ -20,8 +23,3 @@ $ docker-compose up -d
 
 Accessing application: http://localhost:3000
 
-
-
-## License
-
-Apache-2.0 ® [DFTech Front-end Team]()
