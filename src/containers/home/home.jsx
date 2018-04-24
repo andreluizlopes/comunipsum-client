@@ -1,4 +1,6 @@
 import React from 'react';
+import * as actions from '../../actions';
+import { connect } from 'react-redux';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import Paper from 'material-ui/Paper';
 import TextField from 'material-ui/TextField';
@@ -14,7 +16,6 @@ class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: 'Lorem ipsum dolor.',
       copied: false,
       open: false
     };
@@ -23,11 +24,14 @@ class Home extends React.Component {
     this.handleRequestClose = this.handleRequestClose.bind(this);
   }
 
-  componentWillMount() {
-    fetch('http://api.comunipsum.com.br/phrases/rand/2')
-    .then(data => {
-      console.log(data)
-    })
+  updatePhrase(nextProps) {
+    this.setState({
+      phrase: nextProps.phrase
+    });
+  }
+
+  componentDidMount() {
+    this.props.fetchMessage(this.props.history);
   }
 
   handleClick() {
@@ -42,10 +46,7 @@ class Home extends React.Component {
     });
   };
 
-
-
   render() {
-
 
     return (
       <div className="home">
@@ -65,7 +66,7 @@ class Home extends React.Component {
           <Divider />
           <div className="home-phrase">
             <Paper className="phrase-paper" zDepth={3}>
-              <CopyToClipboard text={this.state.value}
+              <CopyToClipboard text={this.props.phrase}
                 onCopy={() => this.setState({copied: true})}
               >
                 <RaisedButton
@@ -80,9 +81,8 @@ class Home extends React.Component {
               <textarea
                 ref={this.phraseTextarea}
                 className="phrase-textarea"
-                >
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia veniam consequatur cumque voluptatem, minus. Illum ea culpa iste, sapiente expedita consectetur? Ab reiciendis, aliquid debitis inventore repellat, eos repellendus voluptate, optio quo delectus voluptas minus magnam tempora aut ipsam fugit!
-              </textarea>
+                value={this.props.phrase}
+              />
             </Paper>
           </div>
         </div>
@@ -98,4 +98,11 @@ class Home extends React.Component {
   }
 }
 
-export default Home;
+const mapStateToProps = state => ({
+  phrase: state.auth.phrase
+});
+
+export default connect(
+  mapStateToProps,
+  actions
+)(Home);

@@ -4,9 +4,9 @@ import { connect } from 'react-redux';
 import * as actions from '../../actions';
 import Home from '../home/home';
 import About from '../about';
-import SpecialPrice from '../special_price'
-import Schedule from '../schedule';
+
 import Header from '../../components/header/header';
+import Footer from '../../components/footer/footer';
 import Signin from '../../components/auth/signin';
 import RequireAuth from '../../components/auth/require_auth';
 
@@ -56,8 +56,6 @@ class App extends Component {
       return (
         <Menu>
           <Link to="/"><MenuItem onClick={this.handleCloseLeftMenu} primaryText="Home"></MenuItem></Link>
-          <Link to="/special-price"><MenuItem onClick={this.handleCloseLeftMenu} primaryText="Special Price"></MenuItem></Link>
-          <Link to="/schedule"><MenuItem onClick={this.handleCloseLeftMenu} primaryText="Schedule"></MenuItem></Link>
           <Link to="/about-us"><MenuItem onClick={this.handleCloseLeftMenu} primaryText="About"></MenuItem></Link>
           <MenuItem onClick={this.handleSignoutUser} primaryText="Sair"></MenuItem>
         </Menu>
@@ -84,12 +82,12 @@ class App extends Component {
         </Drawer>
 
         <main>
+          <Route exact path="/" component={Home} />
           <Route exact path="/signin" component={Signin} />
           <Route exact path="/home" component={Home} />
           <Route exact path="/about" component={About} />
-          <Route exact path="/special-price" component={RequireAuth(SpecialPrice)} />
-          <Route exact path="/schedule" component={RequireAuth(Schedule)} />
         </main>
+        <Footer />
       </div>
     );
   }
