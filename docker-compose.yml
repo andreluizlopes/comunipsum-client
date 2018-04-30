@@ -1,5 +1,5 @@
 nodejs:
-  container_name: nodejs_price_front
+  container_name: nodejs_comunipsum
   build: ./
   volumes:
     - '.:/usr/src/app'

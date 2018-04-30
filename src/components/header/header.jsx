@@ -9,8 +9,8 @@ class Header extends Component {
       <div className="header">
         <div className="header-links">
           <div className="container">
-            <a href="#" className="header-links-item">About</a>
-            <a href="#" className="header-links-item">Github</a>
+            <a href="/about" className="header-links-item">About</a>
+            <a href="https://github.com/" className="header-links-item">Github</a>
           </div>
         </div>
         <div className="header-main">

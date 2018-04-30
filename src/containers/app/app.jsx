@@ -6,16 +6,11 @@ import Home from '../home/home';
 import About from '../about';
 
 import Header from '../../components/header/header';
-import Footer from '../../components/footer/footer';
 import Signin from '../../components/auth/signin';
-import RequireAuth from '../../components/auth/require_auth';
 
-import AppBar from 'material-ui/AppBar';
 import Menu from 'material-ui/Menu';
 import MenuItem from 'material-ui/MenuItem';
 import Drawer from 'material-ui/Drawer';
-import FloatingActionButton from 'material-ui/FloatingActionButton';
-import IconAdd from 'material-ui/svg-icons/content/add';
 
 import '../../assets/css/containers/app/index.css';
 
@@ -70,7 +65,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="app-price">
+      <div className="app">
         <Header />
 
         <Drawer
@@ -87,7 +82,6 @@ class App extends Component {
           <Route exact path="/home" component={Home} />
           <Route exact path="/about" component={About} />
         </main>
-        <Footer />
       </div>
     );
   }

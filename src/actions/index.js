@@ -6,12 +6,11 @@ import {
   AUTH_ERROR,
   FETCH_MESSAGE
 } from './types';
-import UrlQueryHelper from '../helpers/urlQuery';
 
 export function signinUser({ username, password }, history) {
   return dispatch => {
     // Submit username/password to the server
-    axios.post(`${config.services.price_api.uri}/auth`, { username, password })
+    axios.post(`${config.services.api.uri}/auth`, { username, password })
     .then(response => {
       localStorage.setItem('token', response.data.token);
       history.push('/');
@@ -33,7 +32,7 @@ export function authError(error) {
 }
 
 export function signoutUser() {
-  axios.delete(`${config.services.price_api.uri}/auth`, {
+  axios.delete(`${config.services.api.uri}/auth`, {
     headers: { authorization: `Bearer ${localStorage.getItem('token')}` }
   })
   .catch(err => {
@@ -46,7 +45,7 @@ export function signoutUser() {
 
 export function fetchMessage(data = null) {
   return function(dispatch, getState) {
-    let limit = 0;
+//    let limit = 0;
     //axios.get(`${config.services.api.uri}/phrases/rand/${limit}`, {
     axios.get(`${config.services.api.uri}/posts/1`, {
       headers: { contentType: 'application/json' }
